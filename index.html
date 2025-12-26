@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chingaaree BBQ Cafe | Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #ff4d00;
+            --dark-bg: #1a1a1a;
+            --text-light: #f4f4f4;
+            --accent-gold: #ffcc00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: rgba(0,0,0,0.9);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-orange);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: var(--primary-orange);
+            transform: scale(1.05);
+        }
+
+        /* --- Menu Section --- */
+        .section-padding { padding: 80px 10%; }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--accent-gold);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background: #252525;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-orange);
+            transition: 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item h3 { color: var(--primary-orange); margin-bottom: 10px; }
+        .price { float: right; color: var(--accent-gold); }
+
+        /* --- Contact / Info Section --- */
+        #contact { background: #111; text-align: center; }
+        .info-box { margin: 20px 0; }
+        
+        /* --- Footer --- */
+        footer {
+            background: black;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">CHINGAAREE</a>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Find Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Chingaaree BBQ Cafe</h1>
+        <p>Authentic BBQ, Sizzling Tandoors, and the finest Mughlai flavors in Ahmedabad.</p>
+        <div>
+            <a href="#menu" class="btn">Explore Menu</a>
+            <a href="tel:+917434904040" class="btn" style="background: transparent; border: 2px solid white; margin-left: 10px;">Call Now</a>
+        </div>
+    </section>
+
+    <section id="menu" class="section-padding">
+        <h2 class="section-title">Our Signature Sparks</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <span class="price">₹1000</span>
+                <h3>Afghani Chicken</h3>
+                <p>Creamy, mild, and charcoal-grilled to perfection.</p>
+            </div>
+            <div class="menu-item">
+                <span class="price">₹500</span>
+                <h3>Mutton Dum Biryani</h3>
+                <p>Slow-cooked aromatic rice with tender mutton pieces.</p>
+            </div>
+            <div class="menu-item">
+                <span class="price">₹300</span>
+                <h3>Kurkure Momos</h3>
+                <p>Extra crunchy exterior with a juicy heart. A fan favorite!</p>
+            </div>
+            <div class="menu-item">
+                <span class="price">₹500</span>
+                <h3>Paneer Tikka</h3>
+                <p>Fresh cottage cheese cubes marinated in spicy yogurt.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <h2 class="section-title">Visit Us</h2>
+        <div class="info-box">
+            <p><strong>Address:</strong> 37, Karnavati Row House, Chandkheda, Ahmedabad</p>
+            <p><strong>Opening Hours:</strong> 11:30 AM - 2:30 PM | 6:00 PM - 11:30 PM</p>
+            <p><strong>Phone:</strong> +91 74349 04040</p>
+        </div>
+        <div style="margin-top: 30px;">
+            <p style="color: var(--accent-gold);">★ 4.0 Rating on Google Maps</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chingaaree BBQ Cafe. All Rights Reserved.</p>
+        <p>Designed for Excellence.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
